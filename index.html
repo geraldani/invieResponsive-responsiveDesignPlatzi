@@ -38,7 +38,7 @@
 			<!-- Titulo -->
 			<h2>Nuestras guitarras</h2>
 			<div class="iframe">
-				<iframe class="videof" width="560" height="315" src="https://www.youtube.com/embed/PQjYKlISI_s" frameborder="0" allowfullscreen></iframe>
+				<iframe class="videof" src="https://www.youtube.com/embed/EMj9k2lpPBs" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<!-- <video src="GOT-Season-6.mp4" controls></video> -->
 			<!-- Guitarra 1 -->
@@ -122,9 +122,14 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 	<script type="text/javascript">
+		// CARGA DE BLAZY
+		var bLazy = new Blazy({
+			selector: 'img'
+		});
+
 		var iconBurguer = document.getElementById("burguerIcon");
 		var menu = document.getElementById("menu");
-		
+
 		// iconBurguer.addEventListener("touchstart", toggleMenu);
 		iconBurguer.addEventListener("click", toggleMenu);
 
@@ -144,17 +149,11 @@
 			document.body.classList.remove('opened');
 		}
 		// javascript y media queries en la clase 10
-
 		// hammer
 		var $body = document.body;
 		var gestos = new Hammer($body);
 		gestos.on('swiperight', show);
-		gestos.on('swipeleft' hide);
-
-		// CARGA DE BLAZY
-		var bLazy = new Blazy({
-			selector: 'img'
-		});
+		gestos.on('swipeleft', hide);
 	</script>
 </body>
 </html>
