@@ -124,12 +124,7 @@
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 	<script>
-		WebFont.load({
-			google: {
-				families: ['Allerta', 'Montserrat:400,700']
-
-			}
-		});
+		WebFont.load({google:{families:['Allerta','Montserrat:400,700']}});
 	</script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
@@ -167,7 +162,11 @@
 		var gestos = new Hammer($body);
 		gestos.on('swiperight', show);
 		gestos.on('swipeleft', hide);
+		
+		// CARGA DEL CSS
+		function loadCSS(e,t,n,o){"use strict";function r(){for(var e,t=0;t<l.length;t++)l[t].href&&l[t].href.indexOf(i.href)>-1&&(e=!0);e?i.media=n||"all":setTimeout(r)}var i=window.document.createElement("link"),d=t||window.document.getElementsByTagName("script")[0],l=window.document.styleSheets;return i.rel="stylesheet",i.href=e,i.media="only x",o&&(i.onload=o),d.parentNode.insertBefore(i,d),r(),i}
+		loadCSS( "css/invie.min.css" );
 	</script>
-	<link rel="stylesheet" type="text/css" href="css/invie.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/invie.min.css"> -->
 </body>
 </html>
