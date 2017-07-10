@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Precios de tus mejores guitarras</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/invie.css">
+</head>
+<body>
+	<div class="fondo">
+		<header><!-- Encabezado-->
+			<span class="fondoIcon icon-menu" id="burguerIcon"></span>
+			<figure> <!-- logotipo -->
+				<img src="images/invie-logo.png" width="150" alt="Logotipo">
+			</figure>
+			<nav id="menu"> <!-- menu -->
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#contenedor_guitarras">Guitarras</a></li>
+					<li><a href="#">Precios</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="portada"><!-- Portada -->
+			<div id="contenido-portada">
+				<h1>Guitarras <span class="subrayado">invie</span>sibles</h1><!-- Titulo -->
+				<h2>Sé la estrella de rock que siempre quisiste ser</h2><!-- Descripcion -->
+				<button class="boton">Conoce más</button><!-- Boton -->
+			</div>
+		</section>
+	</div>
+	<main>
+		<section>
+			<table id="tabla">
+				<thead>
+					<tr>
+						<th>Modelo</th>
+						<th>Precio</th>
+						<th>Descripción</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Invie classic</td>
+						<td>$10000</td>
+						<td>Una guitarra muy pro</td>
+					</tr>
+					<tr>
+						<td>Invie classic Gold</td>
+						<td>$50000</td>
+						<td>Una guitarra dorada</td>
+					</tr>
+					<tr>
+						<td>Invie acústica</td>
+						<td>$500</td>
+						<td>Una guitarra pasable</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</main>
+
+	
+	<footer><!--Pie de pagina-->
+		<div id="contenido-footer">
+			<!-- Informacion de contacto -->
+			<div id="contacto">
+				<!-- Logo -->
+				<img src="images/invie-logo-white.png" alt="logo blanco">
+				<p><strong>Teléfono</strong><br><a href="tel:584167987077">3024456678</a></p>
+				<p><strong>Email</strong><br><a href="mailto:contacto@invie.com">contacto@invie.com</a></p>
+			</div>
+			<!-- Registro en la pagina -->
+			<form id="formulario"><!-- Formulario -->
+				<div id="col1">
+					<label for="nombre">Nombre</label><br>
+					<input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre..."><br>
+					<label for="email">E-mail</label><br>
+					<input type="email" name="email" id="email" placeholder="example@domain.com"><br>
+					<div id="radio">
+						<label for="female">
+							<input type="radio" name="genero" value="famale" id="female">Mujer
+						</label>
+						<label for="male">
+							<input type="radio" name="genero" value="mal" id="male">Hombre
+						</label><br>
+					</div>
+					<div id="checkbox">
+						<div class="col1">
+							<label for="prop_coti">
+								<input type="checkbox" name="proposito" value="cotizacion" id="prop_coti">Cotización
+							</label>
+							<label for="prop_recla">
+								<input type="checkbox" name="proposito" value="reclamos" id="prop_recla">Reclamos
+							</label>
+						</div>
+						<div class="col2">
+							<label for="prop_comen">
+								<input type="checkbox" name="proposito" value="comentarios" id="prop_comen">Comentarios
+							</label>
+							<label for="prop_otro">
+								<input type="checkbox" name="proposito" value="otros" id="prop_otro">Otros
+							</label>
+						</div>
+					</div>
+				</div>
+				<div id="col2">
+					<label for="coments">Comentarios</label>
+					<textarea rows="5" id="coments" cols="25" placeholder="Escribe tu comentario..."></textarea>
+					<input type="submit" name="enviar" value="Enviar" class="boton">
+				</div>
+			</form>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		var iconBurguer = document.getElementById("burguerIcon");
+		var menu = document.getElementById("menu");
+		
+		// iconBurguer.addEventListener("touchstart", aparece);
+		iconBurguer.addEventListener("click", aparece);
+
+		function aparece (){
+			console.log("contiene? " + menu.classList.contains('active'));
+			if(menu.classList.contains("active")){
+				console.log("entre en el tiene");
+				menu.classList.remove('active');
+				iconBurguer.classList.remove('icon-close');
+			}else{
+				console.log("entre en el NO tiene");
+				menu.classList.add('active');
+				iconBurguer.classList.add('icon-close');
+			}
+		}
+	</script>
+</body>
+</html>
